@@ -152,13 +152,13 @@ def cron():
 async def main():
     df = pd.read_csv(os.path.join(os.path.dirname(__file__), "wave_data.csv"))
 
-    patos = Image.open("patos.jpg")
+    patos = Image.open(os.path.join(os.path.dirname(__file__), "patos.jpg"))
     new_patos = patos.resize((600, 400))
 
-    zarautz =Image.open("zarautz.jpg")
+    zarautz =Image.open(os.path.join(os.path.dirname(__file__), "zarautz.jpg"))
     new_zarautz = zarautz.resize((600, 400))
 
-    hawai = Image.open("hawai.jpg")
+    hawai = Image.open(os.path.join(os.path.dirname(__file__), "hawai.jpg"))
     new_hawai = hawai.resize((600, 400))
 
     col1 , col2 , col3 = st.columns(3)
