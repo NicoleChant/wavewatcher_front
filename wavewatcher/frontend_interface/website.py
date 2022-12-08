@@ -13,6 +13,7 @@ import asyncio
 import aiohttp
 from datetime import datetime
 import plotly.express as px
+import os
 import pandas as pd
 import pytz
 import json
@@ -149,7 +150,7 @@ def cron():
     scheduler.start()
 
 async def main():
-    df = pd.read_csv("wave_data.csv")
+    df = pd.read_csv(os.path.join(os.path.dirname(__file__), "wave_data.csv"))
 
     patos = Image.open("patos.jpg")
     new_patos = patos.resize((600, 400))
