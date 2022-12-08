@@ -10,6 +10,11 @@ numpy
 pandas
 requests
 
+asyncio
+aiohttp
+pytz
+plotly
+
 # img
 pillow
 
